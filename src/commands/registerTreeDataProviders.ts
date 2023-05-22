@@ -97,4 +97,4 @@ export const registerTreeDataProviders = (vscontext: vscode.ExtensionContext, tr
     cmds.forEach((c) => {
         vscontext.subscriptions.push(vscode.commands.registerCommand(c.command, c.callback));
     });
-}
+};
