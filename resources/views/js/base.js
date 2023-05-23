@@ -9,21 +9,14 @@ $(document).ready(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
         });
     });
-    if ($matchTable && $matchTable.bootstrapTable) {
-        $matchTable.bootstrapTable();
-        $matchTable.bootstrapTable("refreshOptions", {
-            classes: "table table-bordered",
-        });
-    }
-});
 
-$(document).ready(function () {
     $("#entitiesSearch").on("keyup", function () {
         var value = $(this).val().toLowerCase();
         $("#entTable tr").filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
         });
     });
+
     if ($matchTable && $matchTable.bootstrapTable) {
         $matchTable.bootstrapTable();
         $matchTable.bootstrapTable("refreshOptions", {

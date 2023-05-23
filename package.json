@@ -573,7 +573,8 @@
         "mobx": "^6.3.2",
         "node-fetch": "^2.6.1",
         "uuid": "^8.3.2",
-        "vscode-extension-telemetry": "^0.3.2"
+        "vscode-extension-telemetry": "^0.3.2",
+        "@vscode/webview-ui-toolkit": "^1.2.2"
     },
     "auto-changelog": {
         "template": "keepachangelog",
