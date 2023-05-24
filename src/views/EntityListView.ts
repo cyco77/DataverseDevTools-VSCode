@@ -28,7 +28,7 @@ export class EntityListView extends Panel {
         this.entities?.forEach(element => {
 
             viewModel.entities += `<tr>`;
-            viewModel.entities += `<td>${element.MetadataId}</td>`;
+            viewModel.entities += `<td class="nowrap">${element.MetadataId}</td>`;
             viewModel.entities += `<td>${element.ObjectTypeCode}</td>`;
             viewModel.entities += `<td><a href=${`command:dvdt.explorer.entities.showEntityDetailsByEntityName?%5B%22${element.LogicalName}%22%5D`}>${element.LogicalName}</a></td>`;
             viewModel.entities += `<td>${element.SchemaName}</td>`;

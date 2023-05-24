@@ -1,6 +1,6 @@
 /**** General ****/
 body {
-    background-color: transparent;
+    /* background-color: transparent; */
     color: var(--vscode-editor-foreground);
     font-family: var(--vscode-editor-font-family);
     font-weight: var(--vscode-editor-font-weight);
@@ -107,7 +107,43 @@ input {
 .table th .desc .desc-icon {
     display: inline;
 }
+
+.table tr:hover{
+    background: var(--list-hover-background);
+    outline: 1px dotted var(--contrast-active-border);
+    outline-offset: -1px;
+}
   
+.table th {
+    padding: calc(var(--design-unit) * 1px) calc(var(--design-unit) * 3px);
+    color: var(--foreground);
+    opacity: 1;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-size: var(--type-ramp-base-font-size);
+    line-height: var(--type-ramp-base-line-height);
+    font-weight: 400;
+    border: solid calc(var(--border-width) * 1px) transparent;
+    border-radius: calc(var(--corner-radius) * 1px);
+    text-align: left;
+}
+
+.table td {
+    padding: calc(var(--design-unit) * 1px) calc(var(--design-unit) * 3px);
+    color: var(--foreground);
+    opacity: 1;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-size: var(--type-ramp-base-font-size);
+    line-height: var(--type-ramp-base-line-height);
+    font-weight: 400;
+    border: solid calc(var(--border-width) * 1px) transparent;
+    border-radius: calc(var(--corner-radius) * 1px);
+}
+
+.table .nowrap{
+    white-space: nowrap;
+}
 
 /**** Navigation ****/
 nav {
