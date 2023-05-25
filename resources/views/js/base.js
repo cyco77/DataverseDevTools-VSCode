@@ -34,14 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function copyToClipboard(id) {
     var copyText = document.getElementById(id);
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    //document.execCommand("copy");
+
     navigator.clipboard.writeText(copyText.value);
-    // M.toast({ html: "Copied!", classes: "rounded" });
-    var toastCopyInfo = document.getElementById("copyToast");
-    var toast = new bootstrap.Toast(toastCopyInfo);
-    toast.show();
+
+    vscode.postMessage({
+        command: "showInfo",
+        text: "Copied to clipboard",
+    });
 }
 
 function linkSpecific(cScore) {

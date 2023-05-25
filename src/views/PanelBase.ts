@@ -17,6 +17,16 @@ export class Panel {
         // This happens when the user closes the panel or when the panel is closed programmatically
         this.webViewPanel.onDidDispose(() => this.dispose(), null, this.disposables);
 
+        this.webViewPanel.webview.onDidReceiveMessage(
+            message => {
+                switch (message.command) {
+                    case 'showInfo':
+                        vscode.window.showInformationMessage(message.text);
+                        return;
+                }
+            }
+        );
+
         // Update the content based on view changes
         this.webViewPanel.onDidChangeViewState(
             (e) => {
